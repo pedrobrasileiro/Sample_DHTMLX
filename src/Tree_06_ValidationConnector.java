@@ -3,9 +3,6 @@
  */
 import java.sql.Connection;
 
-import com.dhtmlx.connector.ConnectorServlet;
-import com.dhtmlx.connector.TreeConnector;
-
 
 
 // TODO: Auto-generated Javadoc
