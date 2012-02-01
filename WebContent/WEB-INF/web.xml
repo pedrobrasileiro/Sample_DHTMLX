@@ -1,12 +1,329 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>Sample_DHTMLX</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-  </welcome-file-list>
+	
+	
+  <servlet>
+    <servlet-name>01_basic_connector</servlet-name>
+    <servlet-class>Grid_01_BasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>01_basic_connector</servlet-name>
+    <url-pattern>/grid/01_basic_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <servlet-name>pgsql_01_basic_connector</servlet-name>
+    <servlet-class>Grid_PGSQLBasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>pgsql_01_basic_connector</servlet-name>
+    <url-pattern>/grid/pgsql_01_basic_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <servlet-name>mssql_01_basic_connector</servlet-name>
+    <servlet-class>Grid_MSSQLBasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>mssql_01_basic_connector</servlet-name>
+    <url-pattern>/grid/mssql_01_basic_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+    <servlet-name>oracle_01_basic_connector</servlet-name>
+    <servlet-class>Grid_OracleBasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>oracle_01_basic_connector</servlet-name>
+    <url-pattern>/grid/oracle_01_basic_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <servlet-name>01a_sql_basic_connector</servlet-name>
+    <servlet-class>Grid_01a_SQLBasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>01a_sql_basic_connector</servlet-name>
+    <url-pattern>/grid/01a_sql_basic_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>02_rendering_connector</servlet-name>
+    <servlet-class>Grid_02_RenderingConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>02_rendering_connector</servlet-name>
+    <url-pattern>/grid/02_rendering_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>03_validation_connector</servlet-name>
+    <servlet-class>Grid_03_ValidationConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>03_validation_connector</servlet-name>
+    <url-pattern>/grid/03_validation_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>04_custom_sql_connector</servlet-name>
+    <servlet-class>Grid_04_CustomSqlConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>04_custom_sql_connector</servlet-name>
+    <url-pattern>/grid/04_custom_sql_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>05_select_filter_connector</servlet-name>
+    <servlet-class>Grid_05_SelectFilterConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>05_select_filter_connector</servlet-name>
+    <url-pattern>/grid/05_select_filter_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>05a_select_filter_connector</servlet-name>
+    <servlet-class>Grid_05a_SelectFilterConnectorA</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>05a_select_filter_connector</servlet-name>
+    <url-pattern>/grid/05a_select_filter_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>06_combo_connector</servlet-name>
+    <servlet-class>Grid_06_GridComboConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>06_combo_connector</servlet-name>
+    <url-pattern>/grid/06_combo_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>06a_combo_connector</servlet-name>
+    <servlet-class>Grid_06a_ComboConnectorA</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>06a_combo_connector</servlet-name>
+    <url-pattern>/grid/06a_combo_connector.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>07_paging_connector</servlet-name>
+    <servlet-class>Grid_07_PagingConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>07_paging_connector</servlet-name>
+    <url-pattern>/grid/07_paging.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>10_config_connector</servlet-name>
+    <servlet-class>Grid_10_ConfigConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>10_config_connector</servlet-name>
+    <url-pattern>/grid/10_config_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ <servlet>
+    <servlet-name>c_01_basic_connector</servlet-name>
+    <servlet-class>Combo_01_BasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>c_01_basic_connector</servlet-name>
+    <url-pattern>/combo/01_basic_connector.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  <servlet-name>c_01_basic_srnd_connector</servlet-name>
+    <servlet-class>Combo_01_SrndConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>c_01_basic_srnd_connector</servlet-name>
+    <url-pattern>/combo/01_basic_srnd_connector.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>c_02_sql_connector</servlet-name>
+    <servlet-class>Combo_02_SQLConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>c_02_sql_connector</servlet-name>
+    <url-pattern>/combo/02_sql_connector.do</url-pattern>
+  </servlet-mapping>
+    <servlet>
+  <servlet-name>c_02_sql_srnd_connector</servlet-name>
+    <servlet-class>Combo_02_SQLSrndConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>c_02_sql_srnd_connector</servlet-name>
+    <url-pattern>/combo/02_sql_srnd_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+  <servlet-name>treegrid_01_basic_connector</servlet-name>
+    <servlet-class>TreeGrid_01_BasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>treegrid_01_basic_connector</servlet-name>
+    <url-pattern>/treegrid/01_basic_connector.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>treegrid_02_dynamic_loading_connector</servlet-name>
+    <servlet-class>TreeGrid_02_DynamicLoadingConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>treegrid_02_dynamic_loading_connector</servlet-name>
+    <url-pattern>/treegrid/02_dynamic_loading_connector.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>treegrid_03_sql_config_connector</servlet-name>
+    <servlet-class>TreeGrid_03_SQLConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>treegrid_03_sql_config_connector</servlet-name>
+    <url-pattern>/treegrid/03_sql_config_connector.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  <servlet-name>treegrid_04_custom_styles_connector</servlet-name>
+    <servlet-class>TreeGrid_04_CustomStyleConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>treegrid_04_custom_styles_connector</servlet-name>
+    <url-pattern>/treegrid/04_custom_styles_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>tree_01_basic_connector</servlet-name>
+    <servlet-class>Tree_01_BasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>tree_01_basic_connector</servlet-name>
+    <url-pattern>/tree/01_basic_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>tree_01p_basic_connector</servlet-name>
+    <servlet-class>Tree_01p_BasicConnectorA</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>tree_01p_basic_connector</servlet-name>
+    <url-pattern>/tree/01p_basic_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>tree_02_dynamic_loading_connector</servlet-name>
+    <servlet-class>Tree_02_DynamicLoadingConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>tree_02_dynamic_loading_connector</servlet-name>
+    <url-pattern>/tree/02_dynamic_loading_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>tree_03_sql_config_connector</servlet-name>
+    <servlet-class>Tree_03_SQLConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>tree_03_sql_config_connector</servlet-name>
+    <url-pattern>/tree/03_sql_config_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>tree_04_custom_styles_connector</servlet-name>
+    <servlet-class>Tree_04_CustomStyleConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>tree_04_custom_styles_connector</servlet-name>
+    <url-pattern>/tree/04_custom_styles_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+  <servlet-name>tree_05_save_connector</servlet-name>
+    <servlet-class>Tree_05_SaveConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>tree_05_save_connector</servlet-name>
+    <url-pattern>/tree/05_save_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+    <servlet>
+  <servlet-name>tree_06_validation_connector</servlet-name>
+    <servlet-class>Tree_06_ValidationConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>tree_06_validation_connector</servlet-name>
+    <url-pattern>/tree/06_validation_connector.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+      <servlet>
+  <servlet-name>scheduler_1</servlet-name>
+    <servlet-class>Scheduler_RecConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>scheduler_1</servlet-name>
+    <url-pattern>/scheduler/recurring_events/events_rec.do</url-pattern>
+  </servlet-mapping>
+  
+      <servlet>
+  <servlet-name>scheduler_2</servlet-name>
+    <servlet-class>Scheduler_BasicConnector</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>scheduler_2</servlet-name>
+    <url-pattern>/scheduler/events.do</url-pattern>
+  </servlet-mapping>
 </web-app>

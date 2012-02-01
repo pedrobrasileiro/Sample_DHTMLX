@@ -14,6 +14,11 @@ import com.dhtmlx.connector.ConnectorServlet;
  */
 public class Combo_01_SQLConnector extends ConnectorServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	/* (non-Javadoc)
 	 * @see com.dhtmlx.connector.ConnectorServlet#configure()
 	 */

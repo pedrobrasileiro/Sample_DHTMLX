@@ -13,6 +13,11 @@ import com.dhtmlx.connector.*;
  */
 public class Combo_01_BasicConnector extends ConnectorServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	/* (non-Javadoc)
 	 * @see com.dhtmlx.connector.ConnectorServlet#configure()
 	 */
