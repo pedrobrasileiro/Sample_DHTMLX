@@ -6,7 +6,7 @@ public class DataBaseConnection {
 		Connection conn=null;
 		try {
 			Class.forName ("com.mysql.jdbc.Driver").newInstance ();
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/sampleDB", "root", "");
+			conn = DriverManager.getConnection("jdbc:mysql://hanzo-db.local.hanzo.com.br/sampleDB", "root", "hanzo123");
 		} catch (Throwable e) {
 			e.printStackTrace();
 		}
