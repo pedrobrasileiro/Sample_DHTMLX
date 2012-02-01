@@ -14,6 +14,11 @@ import com.dhtmlx.connector.SchedulerConnector;
  */
 public class Scheduler_RecConnector extends ConnectorServlet {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	/* (non-Javadoc)
 	 * @see com.dhtmlx.connector.ConnectorServlet#configure()
 	 */
