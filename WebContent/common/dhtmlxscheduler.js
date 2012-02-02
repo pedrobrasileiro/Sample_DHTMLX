@@ -3148,9 +3148,10 @@ scheduler._init_lightbox_events=function(){
 		if (src && src.className)
 			switch(src.className){
 				case "dhx_save_btn":
-					scheduler.callEvent("onEventSave",[scheduler._lightbox_id, scheduler._lightbox_out({id:scheduler._lightbox_id}),scheduler._new_event]);
-					scheduler._empty_lightbox()
-					scheduler.hide_lightbox();
+					if (scheduler.callEvent("onEventSave",[scheduler._lightbox_id, scheduler._lightbox_out({id:scheduler._lightbox_id}),scheduler._new_event])) {
+						scheduler._empty_lightbox()
+						scheduler.hide_lightbox();
+					}	
 					break;
 				case "dhx_delete_btn":
 					var c=scheduler.locale.labels.confirm_deleting; 
