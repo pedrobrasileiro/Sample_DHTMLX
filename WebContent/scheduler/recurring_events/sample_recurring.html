@@ -27,6 +27,18 @@
 		var dp = new dataProcessor("events_rec.do");
 		dp.init(scheduler);
 		*/
+		
+	    scheduler.attachEvent("onEventSave",function(id,data,is_new_event){
+	    	if (!data.text) {
+	            alert("Text must not be empty");
+	            return false;
+	        }
+	        if (data.text.length<20) {
+	            alert("Text too small");
+	            return false;
+	        }
+	        return true;
+	    });
 	}
 </script>
 <body onload="init();">
