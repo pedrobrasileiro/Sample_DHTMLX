@@ -3130,6 +3130,17 @@ scheduler.show_cover=function(){
 	this._cover.className="dhx_cal_cover";
 	document.body.appendChild(this._cover);
 }
+scheduler._lightbox_out=function(ev){
+	var sns = this.config.lightbox.sections;       
+	for (var i=0; i < sns.length; i++) {
+		var node=document.getElementById(sns[i].id).nextSibling;
+		var block=this.form_blocks[sns[i].type];
+		var res=block.get_value.call(this,node,ev, sns[i]);
+		if (sns[i].map_to!="auto")
+			ev[sns[i].map_to]=res;
+	}
+	return ev;
+}
 scheduler._init_lightbox_events=function(){
 	this._get_lightbox().onclick=function(e){
 		var src=e?e.target:event.srcElement;
@@ -3137,6 +3148,7 @@ scheduler._init_lightbox_events=function(){
 		if (src && src.className)
 			switch(src.className){
 				case "dhx_save_btn":
+					scheduler.callEvent("onEventSave",[scheduler._lightbox_id, scheduler._lightbox_out({id:scheduler._lightbox_id}),scheduler._new_event]);
 					scheduler._empty_lightbox()
 					scheduler.hide_lightbox();
 					break;
