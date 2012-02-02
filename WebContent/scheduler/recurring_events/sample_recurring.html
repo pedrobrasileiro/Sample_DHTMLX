@@ -18,12 +18,12 @@
 	}	
 </style>
 <script type="text/javascript" charset="utf-8">
-
-	
 	function init() {
 		scheduler.config.xml_date="%Y-%m-%d %H:%i";
-		scheduler.config.details_on_create=true;
-		scheduler.config.details_on_dblclick=true;
+		scheduler.config.details_on_create    = true;
+		scheduler.config.details_on_dblclick  = true;
+		scheduler.config.full_day             = true;
+		scheduler.config.wide_form            = true;
 		scheduler.init('scheduler_here',null,"month");
 		scheduler.load("events_rec.do?uid="+scheduler.uid());
 		/*
@@ -40,11 +40,11 @@
 	            return false;
 	        }
 	        $.ajax({
-			  url: "http://localhost:3000/events",
+			  url: "http://192.168.1.3:6060/arws/rest/reminders/",
 			  type: "POST",
-			  data: "text="+data.text,
+			  data: "text="+data.text+"&start_date="+data.start_date+"&end_date="+data.end_date+"&rec_type="+data.rec_type+"&event_length="+data.event_length+"&event_pid="+data.event_pid,
 			  context: document.body,
-			  complete: function(){
+			  complete: function() {
 			    alert("Requisição completa");
 			  }
 			});
