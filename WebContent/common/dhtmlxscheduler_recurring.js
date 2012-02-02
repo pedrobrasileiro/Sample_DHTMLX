@@ -258,6 +258,7 @@ scheduler.attachEvent("onEventIdChange",function(id,new_id){
 })
 scheduler.attachEvent("onBeforeEventDelete",function(id){
 	var ev = this.getEvent(id);
+	alert("mozo?!");
 	if (id.toString().indexOf("#")!=-1) {
 		var id = id.split("#");
 		var nid = this.uid();

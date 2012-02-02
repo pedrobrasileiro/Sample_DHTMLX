@@ -6,6 +6,7 @@
 </head>
 	<script src="../../common/dhtmlxscheduler.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../common/dhtmlxscheduler_recurring.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="../../common/dhtmlxscheduler.css" type="text/css" title="no title" charset="utf-8">
 	<link rel="stylesheet" href="../../common/dhtmlxscheduler_recurring.css" type="text/css" title="no title" charset="utf-8">
 <style type="text/css" media="screen">
@@ -17,6 +18,8 @@
 	}	
 </style>
 <script type="text/javascript" charset="utf-8">
+
+	
 	function init() {
 		scheduler.config.xml_date="%Y-%m-%d %H:%i";
 		scheduler.config.details_on_create=true;
@@ -27,7 +30,6 @@
 		var dp = new dataProcessor("events_rec.do");
 		dp.init(scheduler);
 		*/
-		
 	    scheduler.attachEvent("onEventSave",function(id,data,is_new_event){
 	    	if (!data.text) {
 	            alert("Text must not be empty");
@@ -37,6 +39,15 @@
 	            alert("Text too small");
 	            return false;
 	        }
+	        $.ajax({
+			  url: "http://localhost:3000/events",
+			  type: "POST",
+			  data: "text="+data.text,
+			  context: document.body,
+			  complete: function(){
+			    alert("Requisição completa");
+			  }
+			});
 	        return true;
 	    });
 	}
